@@ -27,25 +27,48 @@ RegisterNumber: 212223230151
 ``` Python
 import numpy as np
 import matplotlib.pyplot as plt
+```
+``` Python
 a=np.array(eval(input()))
 b=np.array(eval(input()))
+```
+![image](https://github.com/user-attachments/assets/27512d49-c179-44de-bf9b-a597a179f9ce)
+
+``` Python
 abar=np.mean(a)
 bbar=np.mean(b)
 print(abar,bbar)
+```
+![image](https://github.com/user-attachments/assets/ee23af1c-42bd-4572-8c26-b65ac3243a4c)
+
+``` Python
 num,den=0,0
 for i in range(len(a)):
     num+=((a[i]-abar)*(b[i]-bbar))
     den+=(a[i]-abar)**2
 m=num/den
 print(m)
+```
+![image](https://github.com/user-attachments/assets/ba1e401b-60ab-4de8-b6fc-7783ef514dfa)
+
+``` Python
 c=bbar-m*abar
 print(c)
+```
+![image](https://github.com/user-attachments/assets/e3fa09d8-061c-4044-8e5f-b81db2bead01)
+
+``` Python
 ycal=m*a+c
 ycal
+```
+![image](https://github.com/user-attachments/assets/773284b0-591c-4523-a2d8-5bb4e405a101)
+
+``` Python
 plt.scatter(a,b,color='black')
 plt.plot(a,ycal,color='orange')
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/671526d8-c92f-4953-ae3f-7faa84870dc8)
 
 ## Output:
 ![image](https://github.com/user-attachments/assets/7971d040-6612-4d59-ba2b-7296650d5a08)
