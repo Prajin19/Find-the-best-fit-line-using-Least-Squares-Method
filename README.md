@@ -1,4 +1,6 @@
 # Implementation of Univariate Linear Regression
+# Name : Prajin S
+# Register Number : 212223230151
 ## AIM:
 To implement univariate Linear Regression to fit a straight line using least squares.
 
@@ -17,16 +19,38 @@ To implement univariate Linear Regression to fit a straight line using least squ
 6. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 
 ## Program:
+
+```Program to implement univariate Linear Regression to fit a straight line using least squares.
+Developed by: Prajin S
+RegisterNumber: 212223230151
 ```
-/*
-Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: 
-RegisterNumber:  
-*/
+``` Python
+import numpy as np
+import matplotlib.pyplot as plt
+a=np.array(eval(input()))
+b=np.array(eval(input()))
+abar=np.mean(a)
+bbar=np.mean(b)
+print(abar,bbar)
+num,den=0,0
+for i in range(len(a)):
+    num+=((a[i]-abar)*(b[i]-bbar))
+    den+=(a[i]-abar)**2
+m=num/den
+print(m)
+c=bbar-m*abar
+print(c)
+ycal=m*a+c
+ycal
+plt.scatter(a,b,color='black')
+plt.plot(a,ycal,color='orange')
+plt.show()
 ```
 
 ## Output:
-![best fit line](sam.png)
+![image](https://github.com/user-attachments/assets/7971d040-6612-4d59-ba2b-7296650d5a08)
+![image](https://github.com/user-attachments/assets/9d65f6e6-08bc-4d53-b71d-ec1af2383cf4)
+
 
 
 ## Result:
